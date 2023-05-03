@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "circle filter",
+  "version": "1.0.0",
+  "description": "指定したサークルをDLsiteで非表示にする",
+
+  "permissions": ["storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.dlsite.com/*/fsr/*", "*://*.dlsite.com/*/works/*"],
+      "js": ["main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_ui":{
+    "page": "options/options.html"
+  }
+
+}

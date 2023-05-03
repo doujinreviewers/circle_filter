@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dlsite circle filter</title>
+
+    <style>
+      body {
+        width: 40em;
+      }
+      textarea {
+        width: 30em;
+        height: 20em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>1行に1サークルを記入し、保存ボタンを押してください。</p>
+    <div>
+      <p>非表示にするサークルの名前またはRGを含むサークルのID</p>
+      <textarea id="ng_circles"></textarea>
+    </div>
+
+    <p>非表示件数を表示</p>
+    <div>
+      <input type="checkbox" id="show_ng_count">
+      <label for="show_ng_count">非表示にした件数を表示する</label>
+    </div>
+
+    <button id="save">保存</button><output id="status"></output>
+
+    <script src="options.js"></script>
+  </body>
+</html>
