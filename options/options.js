@@ -10,7 +10,11 @@ let storeSettings = () => {
 
 let updateUI = (restoredSettings) => {
   let ng_circles = document.getElementById("ng_circles");
-  ng_circles.value = restoredSettings.ng_circles;
+  if (typeof restoredSettings.ng_circles !== "undefined") {
+    ng_circles.value = restoredSettings.ng_circles;
+  } else {
+    ng_circles.value = "";
+  }
 
   document.getElementById('show_ng_count').checked = restoredSettings.show_ng_count;
 }
