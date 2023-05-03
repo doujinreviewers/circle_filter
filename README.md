@@ -6,7 +6,7 @@
 
 - Chrome
 
-1. https://github.com/doujinreviewers/circle_filter/releases　からzipをダウンロードして解凍
+1. [https://github.com/doujinreviewers/circle_filter/releases](https://github.com/doujinreviewers/circle_filter/releases)からzipをダウンロードして解凍
 2. Chromeで「chrome://extensions/」を開く
 3. 右上のデベロッパーモードをONにする
 4. 左上の「パッケージ化されていない拡張機能を読み込む」をクリック
