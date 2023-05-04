@@ -16,7 +16,7 @@
       let circle_number = cell.querySelector(".maker_name a").href.match(/RG\d*/)[0]
 
       let result = ng_arr.some((pattern) => {
-        return pattern && (maker_name.match(pattern) || circle_number.match(pattern))
+        return pattern && (maker_name == pattern || circle_number == pattern)
       });
 
       if (result){
