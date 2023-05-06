@@ -11,6 +11,11 @@
       "matches": ["*://*.dlsite.com/*/fsr/*", "*://*.dlsite.com/*/works/*"],
       "js": ["main.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.dlsite.com/maniax/"],
+      "js": ["toppage.js"],
+      "run_at": "document_end"
     }
   ],
   "options_ui":{

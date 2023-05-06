@@ -13,20 +13,30 @@
         width: 30em;
         height: 20em;
       }
+      button {
+        margin-top: 20px;
+      }
     </style>
   </head>
 
   <body>
+    <h2>非表示サークル設定</h2>
     <p>1行に1サークルを記入し、保存ボタンを押してください。</p>
     <div>
       <p>非表示にするサークルの名前またはRGを含むサークルのID</p>
       <textarea id="ng_circles"></textarea>
     </div>
 
-    <p>非表示件数を表示</p>
+    <h2>非表示件数の表示設定</h2>
     <div>
       <input type="checkbox" id="show_ng_count">
       <label for="show_ng_count">非表示にした件数を表示する</label>
+    </div>
+
+    <h2>非表示を行うページの設定</h2>
+    <div>
+      <input type="checkbox" id="enable_top">
+      <label for="enable_top">トップページ</label>
     </div>
 
     <button id="save">保存</button><output id="status"></output>

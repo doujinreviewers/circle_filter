@@ -1,10 +1,12 @@
 let storeSettings = () => {
   let ng_circles = document.getElementById("ng_circles").value.trim();
   let show_ng_count = document.getElementById("show_ng_count");
+  let enable_top = document.getElementById("enable_top");
 
   chrome.storage.local.set({
     ng_circles: ng_circles,
     show_ng_count: show_ng_count.checked,
+    enable_top: enable_top.checked,
   }, updateStatus);
 }
 
@@ -17,6 +19,7 @@ let updateUI = (restoredSettings) => {
   }
 
   document.getElementById('show_ng_count').checked = restoredSettings.show_ng_count;
+  document.getElementById('enable_top').checked = restoredSettings.enable_top;
 }
 
 const gettingStoredSettings = chrome.storage.local.get(updateUI);
