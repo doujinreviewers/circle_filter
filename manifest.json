@@ -16,6 +16,11 @@
       "matches": ["*://*.dlsite.com/maniax/"],
       "js": ["toppage.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.dlsite.com/maniax/ranking*"],
+      "js": ["rankingpage.js"],
+      "run_at": "document_end"
     }
   ],
   "options_ui":{
