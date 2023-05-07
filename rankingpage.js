@@ -18,8 +18,14 @@
   
   chrome.storage.local.get({
     ng_circles: "",
-    show_ng_count: false
+    show_ng_count: false,
+    enable_ranking: false
   },(settings)=>{
+
+    if(!settings.enable_ranking){
+      return;
+    }
+
     let ng_arr = settings.ng_circles.split(/\r\n|\n/);
     let cells = all_cells.length != 0 ? all_cells : category_cells;
     let ngcount = 0;
