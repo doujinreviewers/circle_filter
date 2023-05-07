@@ -26,6 +26,11 @@
       "matches": ["*://*.dlsite.com/maniax/announce/list*"],
       "js": ["announcepage.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.dlsite.com/maniax/new*"],
+      "js": ["newpage.js"],
+      "run_at": "document_end"
     }
   ],
   "options_ui":{
