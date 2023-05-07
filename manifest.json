@@ -21,6 +21,11 @@
       "matches": ["*://*.dlsite.com/maniax/ranking*"],
       "js": ["rankingpage.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.dlsite.com/maniax/announce/list*"],
+      "js": ["announcepage.js"],
+      "run_at": "document_end"
     }
   ],
   "options_ui":{
