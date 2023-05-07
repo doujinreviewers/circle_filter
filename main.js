@@ -5,8 +5,14 @@
 
   chrome.storage.local.get({
     ng_circles: "",
-    show_ng_count: false
+    show_ng_count: false,
+    enable_search: false
   },(settings)=>{
+
+    if(!settings.enable_search){
+      return;
+    }
+
     let ng_arr = settings.ng_circles.split(/\r\n|\n/);
     let cells = type1_cells.length != 0 ? type1_cells : type3_cells;
     let ngcount = 0;
