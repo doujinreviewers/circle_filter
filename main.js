@@ -1,5 +1,18 @@
 "use strict";
 {
+  let judge = (ng_circles, maker_name_or_circle_number) => {
+    return ng_circles.some((pattern) => {
+      return pattern && pattern == maker_name_or_circle_number
+    });
+  }
+
+  let getMakerNameAndCircleNumber = (cell) => {
+    return {
+      maker_name: cell.querySelector(".maker_name a").textContent.trim(),
+      circle_number: cell.querySelector(".maker_name a").href.match(/RG\d*/)[0]
+    };
+  }
+
   let type1_cells = document.querySelectorAll(".work_1col_table.n_worklist > tbody > tr");
   let type3_cells = document.querySelectorAll("#search_result_img_box > li");
 
@@ -18,14 +31,9 @@
     let ngcount = 0;
 
     Array.from(cells).forEach((cell) => {
-      let maker_name = cell.querySelector(".maker_name").textContent;
-      let circle_number = cell.querySelector(".maker_name a").href.match(/RG\d*/)[0]
+      let { maker_name, circle_number } = getMakerNameAndCircleNumber(cell);
 
-      let result = ng_arr.some((pattern) => {
-        return pattern && (maker_name == pattern || circle_number == pattern)
-      });
-
-      if (result){
+      if (judge(ng_arr, maker_name) || judge(ng_arr, circle_number)){
         cell.remove();
         ngcount++;
       }
